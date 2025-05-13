@@ -1,0 +1,14 @@
+maubot: 0.1.0
+id: org.feral-programming.feralbot
+version: 1.4.0
+license: MIT
+modules:
+  - commands
+  - feral_bot
+main_class: FeralBot
+dependencies:
+  - typer>=0.15.3
+  - click==8.1.7
+requirements:
+  - typer>=0.15.3
+  - click==8.1.7
