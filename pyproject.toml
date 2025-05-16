@@ -1,9 +1,15 @@
 [project]
-name = "feral_bot"
+name = "scott-bot"
 version = "0.1.0"
 description = "Default template for PDM package"
-authors = [{ name = "scott carver", email = "scott@artificia.org" }]
-dependencies = ["maubot>=0.5.2", "typer[all]>=0.15.3", "click==8.1.7"]
+authors = [
+    { name = "scott carver", email = "scott@artificia.org" },
+]
+dependencies = [
+    "maubot>=0.5.2",
+    "typer[all]>=0.15.3",
+    "click==8.1.7",
+]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = { text = "MIT" }

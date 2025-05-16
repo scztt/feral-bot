@@ -1,14 +1,21 @@
-from typing import Optional, List
+from typing import Annotated, Optional, List
 import random
 import typer
 from typer.testing import CliRunner
+from typer.models import CommandInfo
 
+from poems import poems
 
 # COMMAND LINE TOOLS
 app = typer.Typer()
 
 
-def run_from_message(message:str):
+@app.callback()
+def callback():
+    pass
+
+
+def run_from_message(message: str):
     runner = CliRunner()
     return runner.invoke(app, message).output
 
@@ -16,13 +23,10 @@ def run_from_message(message:str):
 #######################################################################################
 # COMMANDS
 @app.command()
-def greet(name: str):
-    print(f"Hello there {name}")
+def poem():
+    poem = random.choice(poems)
+    print(poem)
 
-@app.command()
-def shuffle(items: List[str]):
-    random.shuffle(items)
-    print(", ".join(items))
 
 #
 #######################################################################################
